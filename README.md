@@ -1,5 +1,5 @@
 # **Accordion Slider Documentation**
-## **[Link text](https://6793e4110a25d105b19c14a9--relaxed-faun-b5dec1.netlify.app/ 'Live Demo')**
+## **[Live Demo](https://6793e4110a25d105b19c14a9--relaxed-faun-b5dec1.netlify.app/ 'Live Demo')**
 
 
 ### **Overview**
