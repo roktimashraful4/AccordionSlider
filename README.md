@@ -1,4 +1,6 @@
 # **Accordion Slider Documentation**
+## **[Link text](https://6793e4110a25d105b19c14a9--relaxed-faun-b5dec1.netlify.app/ 'Live Demo')**
+
 
 ### **Overview**
 The Accordion Slider is a dynamic, interactive slider component that displays a set of images or content panels. It has navigation controls (Next and Previous) and can automatically loop through the items. The active item is highlighted, while adjacent items are shown partially. It is a great addition for galleries, product carousels, or interactive image sliders.
