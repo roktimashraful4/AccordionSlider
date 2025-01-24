@@ -1,7 +1,3 @@
-Here’s a simple documentation for your **Accordion Slider** package. This will guide users on how to use it, including setting up the HTML, CSS, and JavaScript.
-
----
-
 # **Accordion Slider Documentation**
 
 ### **Overview**
@@ -141,80 +137,6 @@ button:hover {
 }
 ```
 
-### 3. **JavaScript Setup**
-
-Add the following JavaScript code to make the Accordion Slider functional:
-
-```javascript
-class AccordionSlider {
-  constructor(selector, options = {}) {
-    this.selector = selector;
-    this.options = options;
-    this.panels = document.querySelectorAll(`${selector} .as-panel`);
-    this.prevButton = document.querySelector(`${selector} button:nth-of-type(1)`);
-    this.nextButton = document.querySelector(`${selector} button:nth-of-type(2)`);
-    this.activeIndex = 0;
-
-    this.updateVisiblePanels();
-
-    // Event listeners for buttons
-    this.prevButton.addEventListener('click', () => this.prevPanel());
-    this.nextButton.addEventListener('click', () => this.nextPanel());
-
-    // Auto loop if enabled
-    if (options.autoLoop) {
-      setInterval(() => this.nextPanel(), options.loopInterval || 3000);
-    }
-  }
-
-  // Function to update visible panels
-  updateVisiblePanels() {
-    this.panels.forEach((panel, index) => {
-      panel.classList.remove('active', 'visible');
-
-      // Calculate relative indices
-      const prevIndex = (this.activeIndex - 1 + this.panels.length) % this.panels.length;
-      const nextIndex = (this.activeIndex + 1) % this.panels.length;
-
-      // Apply visibility classes
-      if (index === this.activeIndex) {
-        panel.classList.add('active', 'visible');
-      } else if (index === prevIndex || index === nextIndex) {
-        panel.classList.add('visible');
-      }
-    });
-  }
-
-  // Function to go to the next panel
-  nextPanel() {
-    this.activeIndex = (this.activeIndex + 1) % this.panels.length;
-    this.updateVisiblePanels();
-  }
-
-  // Function to go to the previous panel
-  prevPanel() {
-    this.activeIndex = (this.activeIndex - 1 + this.panels.length) % this.panels.length;
-    this.updateVisiblePanels();
-  }
-
-  // Function to set a specific panel as active
-  setActivePanel(index) {
-    this.activeIndex = index;
-    this.updateVisiblePanels();
-  }
-}
-
-export default AccordionSlider;
-```
-
-In the above JavaScript:
-- The `AccordionSlider` class handles the logic of switching between panels and updating the visibility.
-- It listens for "Next" and "Previous" button clicks to change the active panel.
-- An auto-loop feature is also available for automatic sliding.
-- The `setActivePanel(index)` function allows you to set a specific panel as active.
-
----
-
 ## **Customization Options**
 You can customize the Accordion Slider with the following options:
 
@@ -250,7 +172,3 @@ slider.setActivePanel(2); // Activates the third panel.
 
 ## **Contributing**
 Feel free to fork this repository and create pull requests for any improvements or bug fixes!
-
----
-
-Let me know if you'd like further assistance with this documentation or have additional questions!
