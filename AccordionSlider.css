@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Accordion Slider Styles */
+  .accordion-slider {
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .as-panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .as-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 3rem;
+    height: 10rem;
+    transition: all 0.3s ease-in-out;
+    display: none; /* Initially invisible */
+    transform: scale(0.8); /* Smaller size for hidden panels */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .as-panel.visible {
+    display: block; /* Visible adjacent panels */
+    transform: scale(1); /* Restore size for visible panels */
+  }
+  
+  .as-panel.active {
+    width: 20rem; /* Active panel is wider */
+    opacity: 1;
+    transform: scale(1.05); /* Slight zoom for emphasis */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .as-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .accordion-slider {
+      max-width: 100%;
+    }
+  
+    .as-panel {
+      height: 8rem;
+    }
+  
+    .as-panel.active {
+      width: 15rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+  

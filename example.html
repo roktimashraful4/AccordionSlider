@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./AccordionSlider.css">
+    <style>
+      /* sticky bottom footer  */
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <h1 align="center">Accordion Slider</h1>
+    <div id="accordion-slider" class="accordion-slider">
+        <div class="as-panels">
+          <button>Previous</button>
+          <div class="as-panel"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1"></div>
+          <div class="as-panel"><img src="https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2"></div>
+          <div class="as-panel"><img src="https://images.unsplash.com/photo-1541345922441-c36fd8625f01?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3"></div>
+          <div class="as-panel"><img src="https://images.unsplash.com/photo-1730810746134-571326e2eaa7?q=80&w=1616&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4"></div>
+          <button>Next</button>
+        </div>
+      </div>
+
+
+      <!-- footer  -->
+       <footer>
+        <p>Designed by_ <i><a href="www.roktimashraful.com">Roktim Ashraful</a></i></p>
+      </footer>
+      
+      <script src="./AccordionSlider.js"></script>
+      <script>
+        // Initialize the Accordion Slider
+        const slider = new AccordionSlider('#accordion-slider', {
+        autoLoop: true,       // Enable auto-loop
+        loopInterval: 3000,   // Set loop interval to 3 seconds
+        });
+      </script>
+</body>
+</html>
