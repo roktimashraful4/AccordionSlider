@@ -77,13 +77,13 @@ body {
   width: 1rem;
   height: 10rem;
   transition: all 0.3s ease-in-out;
-  opacity: 0; /* Initially invisible */
+  display: none; /* Initially invisible */
   transform: scale(0.8); /* Smaller size for hidden panels */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .as-panel.visible {
-  opacity: 1; /* Visible adjacent panels */
+  display: block; /* Visible adjacent panels */
   transform: scale(1); /* Restore size for visible panels */
 }
 
